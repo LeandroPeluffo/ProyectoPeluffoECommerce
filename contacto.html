@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+
+            <div>
+                <a href="index.html">HOME</a>
+                <a href="productos.html">PRODUCTOS</a>
+                <a href="carrito.html">CARRITO</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+
+            <div>
+                <a class="marca">LP COMPONENTES</a>
+            </div> 
+            
+            <div id="modoOscuro">
+                <div class="toggle"></div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="ovelay">
+            <form onsubmit="event.preventDefault(); validarForm()">
+                <h1> ¡Contactate con nosotros! </h1>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre completo">
+                <small class="error"></small>
+                
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Tu Email">
+                <small class="error"></small>
+
+                <label for="Telefono">Telefono:</label>
+                <input type="text" id="telefono" placeholder="Teléfono">
+                <small class="error"></small>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" placeholder="Mensaje" rows="6"></textarea>
+                <small class="error"></small>
+
+                <div class="center">
+                    <input type="submit" value="Enviar">
+                    <p id="success"></p>
+                </div>
+
+
+            </form>
+        </div>
+
+
+
+
+    </main>
+
+    <script src="./JS/contacto.js"></script>
+    <script src="./JS/modoOscuro.js"></script>
+</body>
+</html>

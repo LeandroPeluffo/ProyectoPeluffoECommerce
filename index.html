@@ -4,23 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HOME</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
-
+        <nav class="navBar">
+            
+            <div>
+                <a class="linksNavBar" href="index.html">HOME</a>
+                <a class="linksNavBar" href="productos.html">PRODUCTOS</a>
+                <a class="linksNavBar" href="carrito.html">CARRITO</a>
+                <a class="linksNavBar" href="contacto.html">CONTACTO</a>
+            </div>
+            
+            <div>
+                <a class="marca">LP COMPONENTES</a>
+            </div> 
+            
+            <div id="modoOscuro">
+                <div class="toggle"></div>
+            </div>
+        </nav>
     </header>
     <main>
-        <div class="container">
-
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img class="imgSwiper" src="./assets/aorus-waterforce.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imgSwiper" src="./assets/corsair-k55-rgb-pro-xt.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imgSwiper" src="./assets/syncro-1920.jpg" alt=""></div>
+                
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="containerCardsOfertas">
+        
         </div>
     </main>
     <footer>
         
     </footer>
-
-    <script src="productos.js"></script>
+    
+    <script src="./JS/arrayProductos.js"></script>
     <script src="index.js"></script>
+    <script src="./JS/ofertas.js"></script>
+    <script src="./JS/modoOscuro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./JS/swiper.js"></script>
+    
 </body>
 </html>
