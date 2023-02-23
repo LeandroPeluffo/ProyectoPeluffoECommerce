@@ -1,6 +1,11 @@
 //cards de pagina productos (productos con oferta)
-
 const zonaCardsOfertas = document.querySelector(".containerCardsOfertas")
+
+
+const arrayOfertas = productos.filter(
+    oferta == true);
+
+console.log(arrayOfertas);
 
 const cardsDeProductosOfertas = ( array ) => {
     const arrayOfertas = array.reduce(( acc, element ) => {

@@ -59,7 +59,7 @@ body{
 
 }
 
-main.active {
+body.active {
     background-color: black;
 }
 

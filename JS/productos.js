@@ -22,4 +22,16 @@ const cardsDeProductos = ( array ) => {
     return arrayMenorCards
 }
 
-zonaCards.innerHTML = cardsDeProductos (productos)
+zonaCards.innerHTML = cardsDeProductos(productos)
+
+const añadirAlCarrito = () => {
+    const addButton = document.querySelectorAll('.agregarAlCarrito')
+    console.log(addButton);
+    addButton.forEach(element => {
+        element.onclick = () => {
+            console.log(element.id);
+        }
+    });
+}
+
+añadirAlCarrito()
