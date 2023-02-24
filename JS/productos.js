@@ -30,8 +30,16 @@ const añadirAlCarrito = () => {
     addButton.forEach(element => {
         element.onclick = () => {
             console.log(element.id);
+            const myArrayString = localStorage.getItem('myArray');
+            const myArray = JSON.parse(myArrayString);
+            carrito.push(element.id)
+            localStorage.setItem('carrito' , carrito) 
+            console.log(carrito);
         }
     });
 }
+
+
+
 
 añadirAlCarrito()

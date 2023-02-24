@@ -10,14 +10,14 @@
 <body>
     <header>
         <nav class="navBar">
-
+            
             <div>
                 <a href="index.html">HOME</a>
                 <a href="productos.html">PRODUCTOS</a>
                 <a href="carrito.html">CARRITO</a>
                 <a href="contacto.html">CONTACTO</a>
             </div>
-
+            
             <div>
                 <a class="marca">LP COMPONENTES</a>
             </div> 
@@ -27,12 +27,25 @@
             </div>
         </nav>
     </header>
-
+    <main>
+        <div id="cart">
+            <h1>Carrito de compras</h1>
+            <ul id="cart-items">
+                <!-- aquí se agregarán los elementos del carrito -->
+            </ul>
+            <div id="cart-total">
+                Total: $<span id="cart-total-value">0</span>
+            </div>
+            
+        </div>
+        
+        <script src="script.js"></script>
+    </main>
     
     <script src="./JS/carrito.js"></script>
     <script src="./JS/productos.js"></script>
     <script src="./JS/modoOscuro.js"></script>
     
-
+    
 </body>
 </html>
