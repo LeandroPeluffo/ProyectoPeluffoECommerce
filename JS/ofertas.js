@@ -1,6 +1,7 @@
 //cards de pagina productos (productos con oferta)
 const zonaCardsOfertas = document.querySelector(".containerCardsOfertas")
 
+const carrito = []
 
 var arrayOfertas = productos.filter(function(producto) {
     return producto.oferta;
@@ -39,8 +40,9 @@ const añadirAlCarrito = () => {
     addButton.forEach(element => {
         element.onclick = () => {
             console.log(element.id);
-            const carrito = localStorage.getItem('carrito') || []
-            carrito.push(element)
+            const myArrayString = localStorage.getItem('myArray');
+            const myArray = JSON.parse(myArrayString);
+            carrito.push(element.id)
             localStorage.setItem('carrito' , carrito) 
             console.log(carrito);
         }
@@ -50,5 +52,5 @@ const añadirAlCarrito = () => {
 
 
 
-añadirAlCarrito()
+añadirAlCarrito(productos)
 

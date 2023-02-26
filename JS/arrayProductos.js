@@ -73,8 +73,8 @@ const productos = [
     },
     {
         "id": 9,
-        "nombre": 'Logitech g240',
-        "img":["/assets/LogitechG240.png"],
+        "nombre": 'Logitech g240', 
+        "img":["./assets/LogitechG240.png"],
         "precio": 800,
         "descripcion": 'Mousepad gamer Logitech 280 x 340 mm',
         "categoria":'perifericos',

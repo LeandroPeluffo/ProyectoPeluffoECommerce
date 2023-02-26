@@ -1,53 +1,27 @@
-const nombre = document.querySelector("#nombre");
-const email = document.querySelector("#email");
-const numero = document.querySelector("#numero");
-const mensaje = document.querySelector("#mensaje");
-const success = document.querySelector("#success");
-const errorNodes = document.querySelector(".error");
+const form = document.getElementById('contact-form');
 
+form.addEventListener('submit', (event) => {
+event.preventDefault();
 
-function validarForm(){
-    
-    vaciarMensajes();
-    let errorFlag = false;
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const message = document.getElementById('message').value;
 
-    if(nombre.Value.length < 2){
-        errorNodes[0].innerText = "El nombre debe ser mas largo";
-        nombre.classList.add("error-border");
-        errorFlag = true;
-    }
-
-    if(!emailValido(email.Value)){
-        errorNodes[1].innerText = "Mail invalido";
-        nombre.classList.add("error-border");
-        errorFlag = true;
-    }
-
-    if(mensaje.value.length < 1){
-        errorNodes[2].innerText = "por favor ingrese un mensaje";
-        mensaje.classList.add("error-border");
-        errorFlag = true;
-    }
-
-    if(!errorFlag){
-        success.innerText = "enviado"
-    }
+if (!validateEmail(email)) {
+    alert('Por favor, ingrese un email válido.');
+    return;
 }
 
+const data = { name, email, phone, message };
+localStorage.setItem('contactData', JSON.stringify(data));
 
-function vaciarMensajes(){
-    for(let i = 0; i < errorNodes.length; i++){
-        errorNodes[i].innerText = "";
-    }
-    success.innerText = "";
-    nombre.classList.remove("error-border");
-    email.classList.remove("error-border");
-    mensaje.classList.remove("error-border");
-}
+alert('¡Gracias por contactarnos!');
 
+form.reset();
+});
 
-
-function emailValido(email){
-    let patron = /\S+@\S+\.\S+/;
-    return patron.test(email);
+function validateEmail(email) {
+const regex = /^\S+@\S+\.\S+$/;
+return regex.test(email);
 }

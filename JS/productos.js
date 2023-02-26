@@ -1,4 +1,6 @@
 //cards de pagina productos (todos los productos)
+const carrito = []
+
 
 const zonaCards = document.querySelector(".containerCards")
 
@@ -40,6 +42,4 @@ const añadirAlCarrito = () => {
 }
 
 
-
-
-añadirAlCarrito()
+añadirAlCarrito(productos)

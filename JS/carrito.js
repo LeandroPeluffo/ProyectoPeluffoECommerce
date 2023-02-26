@@ -1,12 +1,22 @@
-const carrito = []
+const idDeProductoStorage = localStorage.getItem("Id de producto")
+
+const numero = parseInt(idDeProductoStorage)
+
+const productoEncontrado = productos.find(producto => producto.id === numero);
+
+const nombreProducto = productoEncontrado.nombre;
+const precioProducto = productoEncontrado.precio;
+
+console.log(`El producto seleccionado es ${nombreProducto} y su precio es ${precioProducto}`);
+
 
 
 const zonaCarrito = document.querySelector(".containerCarrito")
 
-const cardsDeProductos = ( array ) => {
+const productosDelCarrito = ( array ) => {
     const carritoArray = array.reduce(( acc, element ) => {
         return acc + `
-            <div class="card" id=${element.id}
+            <div class="cart-items" id=${element.id}
                 <div class="card-img">
                     <img class="foto" src=${element.img} alt=${element.nombre}
                 </div>
@@ -23,4 +33,8 @@ const cardsDeProductos = ( array ) => {
     return arrayMenorCards
 }
 
-zonaCards.innerHTML = cardsDeProductos(carrito)
+
+
+zonaCards.innerHTML = productosDelCarrito(carrito)
+
+productosDelCarrito (carrito)
