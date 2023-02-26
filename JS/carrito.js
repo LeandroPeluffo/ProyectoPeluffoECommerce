@@ -1,4 +1,4 @@
-const idDeProductoStorage = localStorage.getItem("Id de producto")
+const idDeProductoStorage = localStorage.getItem("carrito")
 
 const numero = parseInt(idDeProductoStorage)
 
