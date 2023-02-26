@@ -30,7 +30,7 @@ const productosDelCarrito = ( array ) => {
             </div>
         `
     }, "")
-    return arrayMenorCards
+    return productosDelCarrito
 }
 
 
